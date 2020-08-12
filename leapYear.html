@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leapyear</title>
+</head>
+<body>
+<script>
+    let year = +prompt("enter a year");
+    // let leapYear = false;
+    let isDiv4 = year % 4 == 0;
+    if (isDiv4) {
+        let isDiv100 = year % 100 == 0;
+        if (isDiv100) {
+            let isDiv400 = year % 400 == 0;
+            if (isDiv400) {
+                leapYear = true;
+            }
+        } else {
+            leapYear = true;
+        }
+    }
+    if (leapYear) {
+        alert(year + "is a leap year")
+    } else {
+        alert(year + "is Not a leap year")
+    }
+</script>
+</body>
+</html>
