@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="test()">
+<img id="iron" src="https://media2.giphy.com/media/3cWrAY4RyMwdvviVTS/giphy.gif" alt="iron man" style="position:absolute;left:0; top:0;" height="100" width="80">
+<script>
+    function up() {
+        let ironman = document.getElementById("iron");
+        ironman.style.top = parseInt(ironman.style.top) - 10 + 'px';
+    }
+    function down() {
+        let ironman = document.getElementById('iron');
+        ironman.style.top = parseInt(ironman.style.top) + 10 + 'px';
+    }
+    function left() {
+        let ironman = document.getElementById('iron');
+        ironman.style.left = parseInt(ironman.style.left) - 10 + 'px';
+    }
+    function right() {
+        let ironman = document.getElementById('iron');
+        ironman.style.left = parseInt(ironman.style.left) + 10 + 'px';
+    }
+    function move(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                left();
+                break;
+            case 39:
+                right();
+                break;
+            case 38:
+                up();
+                break;
+
+            case 40:
+                down();
+                break;
+        }
+    }
+    function test() {
+            window.addEventListener('keydown', move);
+        }
+
+</script>
+</body>
+</html>
