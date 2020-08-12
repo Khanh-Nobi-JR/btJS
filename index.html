@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="wei" placeholder="nhập cân nặng"/> <br>
+<input type="text" id="hei" placeholder="nhập chiều cao"/>
+<br> <input type="button" onclick="check();" value="click me">
+<span id="result"></span>
+<script>
+    function check() {
+        let weight = Number(document.getElementById('wei').value);
+        let height = Number(document.getElementById('hei').value);
+        let BMI = weight / (height**2);
+        if (BMI < 18) {
+            alert('gầy quá bạn ạ, mau ăn chóng lớn nhé')
+        } else if (BMI < 25) {
+            alert('dáng chuẩn bạn nha');
+        } else  if (BMI < 30) {
+            alert('Hơi béo rồi bạn ơi, giảm cân nhanh còn kịp')
+        } else {
+            alert('thôi muộn rồi, cắt mỡ đi thôi')
+        }
+    }
+
+</script>
+</body>
+</html>
