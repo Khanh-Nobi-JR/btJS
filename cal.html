@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cal</title>
+</head>
+<body>
+<style>
+    td,input{
+        width: 30px;
+        height: 30px;
+    }
+</style>
+<table style="border-collapse: collapse">
+    <tr>
+        <td colspan="4">
+            <input style="width: 140px" type="text"id="input">
+        </td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7"onclick="cal('7')"></input></td>
+        <td><input type="button" value="8"onclick="cal('8')"></input></td>
+        <td><input type="button" value="9"onclick="cal('9')"></input></td>
+        <td><input type="button" value="*"onclick="cal('*')"></input></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4"onclick="cal('4')"></input></td>
+        <td><input type="button" value="5"onclick="cal('5')"></input></td>
+        <td><input type="button" value="6"onclick="cal('6')"></input></td>
+        <td><input type="button" value="-"onclick="cal('-')"></input></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1"onclick="cal('1')"></input></td>
+        <td><input type="button" value="2"onclick="cal('2')"></input></td>
+        <td><input type="button" value="3"onclick="cal('3')"></input></td>
+        <td><input type="button" value="+"onclick="cal('+')"></input></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="c"onclick="document.getElementById()"></input></td>
+        <td><input type="button" value="0"onclick="cal('0')"></input></td>
+        <td><input type="button" value="."onclick="cal('.')"></input></td>
+        <td><input type="button" value="="onclick="result()"></input></td>
+    </tr>
+</table>
+<script>
+    function cal(val){
+        document.getElementById('input').value += val;
+    }
+    function result() {
+        let list = document.getElementById('input').value;
+        let screen = eval(list);
+        document.getElementById('input').value = screen;
+    }
+    // function reset(){
+    //     document.getElementById('input').value = '';
+    // }
+</script>
+</body>
+</html>
